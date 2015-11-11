@@ -1,0 +1,2 @@
+LABEL=`date '+%Y%m%d-%H%M%S'`
+cp $1 $1-cp-$LABEL

@@ -1,0 +1,2 @@
+LABEL=`date '+%Y%m%d-%H%M%S'`
+mv $1 $1-mv-$LABEL

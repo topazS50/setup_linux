@@ -1,0 +1,12 @@
+CURRENT_EPOCH=`date +%s`
+TIMESTAMP=`stat -c "%X" ~/.backup/timestamp`
+TIMEPASSED=`expr $TIMESTAMP - $CURRENT_EPOCH` 
+DATESTAMP=`date '+%Y%m%d'`
+if [ $DATESTAMP -gt 86400 ]; then
+  sudo mkdir -p /media/hd2
+  sudo mount /dev/sdb1 /media/hd2
+  sudo dd if=/dev/sda2 | gzip > /media/hd2/bkp/image-$DATESTAMP.gz
+  if [ $? -eq 0 ]; then
+    touch ~/.backup/timestamp 
+  fi
+fi
