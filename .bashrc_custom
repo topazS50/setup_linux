@@ -16,3 +16,7 @@ export PS1='${debian_chroot:+($debian_chroot)}\[\033[0;31m\]\t \[\033[0;36m\]\u\
 
 alias activate_ve='. activate_ve'
 . activate_ve
+
+alias gplm="git pull origin master"
+alias gpsm="git push origin master"
+alias gcm="git commit -a ; git push origin master"
