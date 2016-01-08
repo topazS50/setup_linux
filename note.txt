@@ -1,0 +1,14 @@
+##### How to Mount Remote Directory #####
+
+Ref:
+http://www.howtogeek.com/howto/ubuntu/how-to-mount-a-remote-folder-using-ssh-on-ubuntu/
+
+sudo apt-get install sshfs
+sudo modprobe fuse
+sudo adduser <username> fuse
+sudo chown root:fuse /dev/fuse
+sudo chmod +x /dev/fuse
+mkdir -p ~/remote/path
+sshfs <username>@<ipaddress>:/remotepath ~/remote/path
+
+<<<<< How to Mount Remote Directory #####
