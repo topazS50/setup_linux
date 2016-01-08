@@ -14,6 +14,7 @@ cd `cat ~/.last_dir`
 #
 export PS1='${debian_chroot:+($debian_chroot)}\[\033[0;31m\]\t \[\033[0;36m\]\u\[\033[0;31m\]@\[\033[0;36m\]\h\[\033[0;33m\]:\[\033[0;31m\]\w\[\033[0;31m\]\[\033[0;0m\] $ '
 
+export PATH=$PATH:~/setup_linux/bin/
 alias activate_ve='. activate_ve'
 . activate_ve
 
