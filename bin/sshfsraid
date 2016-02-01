@@ -1,0 +1,1 @@
+sshfs -o allow_other ogawak@aster.local:/raid/ /raid

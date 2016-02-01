@@ -1,0 +1,1 @@
+echo 'kpThefc1Vivo' | sudo chattr +a $1

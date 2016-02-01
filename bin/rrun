@@ -1,0 +1,3 @@
+echo `pwd` | sed 's/^\/remote//g' > ./dir_remote
+DIR_REMOTE=`cat ./dir_remote`
+ssh -t asterlxc1 "cd $DIR_REMOTE; $*"

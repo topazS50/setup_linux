@@ -1,0 +1,9 @@
+HOME=/home/ogawak
+SRC=$HOME/.worklog/worklog.txt
+DST=/home/ogawak/mirror/vivopc/home/ogawak/.worklog
+scp $SRC ogawak@selene:$DST
+
+SRC=/home/ogawak/mirror/mba11/Users/ogawak/.worklog/worklog.txt
+DST=/home/ogawak/.worklog/worklog-mba11.txt
+scp ogawak@selene:$SRC $DST
+

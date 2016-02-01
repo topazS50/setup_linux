@@ -1,0 +1,3 @@
+export HOME=/home/ogawak/.pyvimdb
+vim $1
+

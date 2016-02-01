@@ -1,0 +1,2 @@
+NBT=/home/ogawak/developper/termnb/nbt.py
+python $NBT $1
