@@ -1,0 +1,41 @@
+FILE=~/.worklog/worklog.txt
+EDITOR="nano +999999999"
+key=$1
+ADDDATETIME=0
+MODEEDITOR=0
+
+while getopts "tnv" opt; do
+  case "$opt" in
+  t)
+  ADDDATETIME=1
+  ;;
+  v)
+  MODEEDITOR=1
+  ;;
+  n)
+  MODEEDITOR=2
+  ;;
+  esac
+done
+
+if [ "$ADDDATETIME" == "1" ]
+then
+  date '+##### %Y.%m.%d (%a) %H:%M #####' >> $FILE
+fi
+
+if [ "$MODEEDITOR" == "0" ]
+then
+  EDITOR="open"
+fi
+if [ "$MODEEDITOR" == "1" ]
+then
+  EDITOR="vim +999999999"
+fi
+if [ "$MODEEDITOR" == "2" ]
+then
+  EDITOR="nano +9999999999"
+fi
+
+$EDITOR $FILE 
+cd ~/.worklog
+git commit -a -m 'backup'
