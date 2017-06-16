@@ -1,0 +1,6 @@
+### USER DEFINED ###
+if [ -n "${BASH_VERSION}" ]; then
+    trap "caller >/dev/null || \
+printf '%s\\n' \"\$(date '+%Y-%m-%dT%H:%M:%S%z') \$(pwd) \
+\$(tty) \${BASH_COMMAND}\" 2>/dev/null >>~/.command_log/command.$(date '+%Y%m%d')" DEBUG
+fi
